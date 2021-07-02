@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example" {
-  name     = "gaurav-resources"
+  name     = var.rgname
   location = "West Europe"
 }
 
@@ -42,9 +42,8 @@ resource "azurerm_network_interface" "example" {
   }
 }
 
-
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "example-machine"
+  name                = var.name
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   size                = var.size
