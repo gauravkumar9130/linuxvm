@@ -5,3 +5,7 @@ variable "size" {
 variable "rgname" {
   default = "myrg"
 }
+
+variable "name" {
+  default = "vm1"
+}
